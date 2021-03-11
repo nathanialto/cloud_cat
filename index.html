@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--name of page in tab-->
+    <title>Cloud Cat</title>
+    <!--my head in tab-->
+    <link rel="icon" href="icon.PNG" />
+    <!--CSS Link-->
+    <link rel="stylesheet" type="text/css" href="" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+
+    <style>
+      #alert {
+        background-color: red;
+        height: 100px;
+        width: 1000px;
+        display: none;
+      }
+
+      body{
+        background-color: #f8e5c1;
+        text-align: center;
+      }
+
+      h2{
+        font-family: 'Roboto', sans-serif;
+        font-size: 60px;
+        text-align: center;
+        color: #868fd8;
+      } 
+
+      .button {
+        background-color: #868fd8; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 24px;
+        margin-left: 10px;
+        margin-top: 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 15px;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <!--my name-->
+      <img style="width: 25%;" src=name.PNG>
+    </header>
+    <!--<div id="alert"><h1>Hello</h1></div>-->
+    <!--cloud cat simulator-->
+    <div id="happy">
+      <img class="cloudImage" src="cloud0.GIF" />
+    </div>
+
+    <!--buttons-->
+    <div style="position: fixed; left: 50%; transform: translate(-50%,-50%); bottom: 0px;"> 
+      <button class="button" id="btn1" onclick="make_sad">Feed Meal</button>
+      <button class="button" id="btn2">Bathe</button>
+      <button class="button" id="btn3">Do Work</button>
+      <button class="button" id="btn4">Take on a Walk</button>
+      <button class="button" id="btn5">Put to Sleep</button>
+    </div>
+
+  </body>
+
+  <script>
+    //initialize the game conditions
+    let counter = 0;
+    let cloudCat = document.querySelector(".cloudImage");
+
+    const button1 = document.querySelector("#btn1");
+    const button2 = document.querySelector("#btn2");
+    const button3 = document.querySelector("#btn3");
+    const button4 = document.querySelector("#btn4");
+    const button5 = document.querySelector("#btn5");
+
+    button1.addEventListener("click", function () {
+      if (counter >= 5) {
+        console.log("Game Over");
+      } else {
+        console.log("keep going");
+        counter++;
+        cloudCat.src = `cloud${counter}.GIF`;
+      }
+      alert("You tried to feed Cloud Cat a proper meal, but they rejected your meal and ate a spoonful of peanut butter and a handful of skittles, instead.")
+
+      if (counter >= 5) {
+        alert("Cloud Cat has gone to hide in their closet, and doesn't want to interact with you anymore.")
+      }
+    });
+
+    button2.addEventListener("click", function () {
+      if (counter >= 5) {
+        console.log("Game Over");
+      } else {
+        console.log("keep going");
+        counter++;
+        cloudCat.src = `cloud${counter}.GIF`;
+      }
+      alert("You suggested Cloud Cat bathe, but they refused to leave their room and said the water would be too cold.")
+
+      if (counter >= 5) {
+        alert("Cloud Cat has gone to hide in their closet, and doesn't want to interact with you anymore.")
+      }
+    });
+
+    button3.addEventListener("click", function () {
+      if (counter >= 5) {
+        console.log("Game Over");
+      } else {
+        console.log("keep going");
+        counter++;
+        cloudCat.src = `cloud${counter}.GIF`;
+      }
+      alert("Cloud Cat has been experiencing burnout and instead watched took a 3 hour nap.")
+
+      if (counter >= 5) {
+        alert("Cloud Cat has gone to hide in their closet, and doesn't want to interact with you anymore.")
+      }
+    });
+
+    button4.addEventListener("click", function () {
+      if (counter >= 5) {
+        console.log("Game Over");
+      } else {
+        console.log("keep going");
+        counter++;
+        cloudCat.src = `cloud${counter}.GIF`;
+      }
+      alert("Cloud Cat refused to leave the house and wants to avoid any potential interactions with another being.")
+
+      if (counter >= 5) {
+        alert("Cloud Cat has gone to hide in their closet, and doesn't want to interact with you anymore.")
+      }
+    });
+
+    button5.addEventListener("click", function () {
+      if (counter >= 5) {
+        console.log("Game Over");
+      } else {
+        console.log("keep going");
+        counter++;
+        cloudCat.src = `cloud${counter}.GIF`;
+      }
+      alert("Cloud Cat couldn't fall asleep and instead watched an entire Netflix original romcom triology.")
+
+      if (counter >= 5) {
+        alert("Cloud Cat has gone to hide in their closet, and doesn't want to interact with you anymore.")
+      }
+    });
+    /*
+          const alert = document.getElementById("alert");
+          alert.style.display = "block";
+          counter++;*/
+  </script>
+</html>
